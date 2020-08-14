@@ -1,0 +1,7 @@
+<all>: AT89C1051_FS1000A_UART_converter.mp AT89C1051_FS1000A_UART_converter.hex
+<files>: AT89C1051_FS1000A_UART_converter.mcp  Libs\fs1000a_lib\fs1000a_lib.mcu Libs\soft_uart_lib\soft_uart_lib.mcu main.mcu
+Libs\fs1000a_lib\fs1000a_lib.mcu: Libs\fs1000a_lib\fs1000a_lib.asm Libs\fs1000a_lib\fs1000a_inc.inc ..\macro\macro_inc.inc
+Libs\soft_uart_lib\soft_uart_lib.mcu: Libs\soft_uart_lib\soft_uart_lib.asm Libs\soft_uart_lib\soft_uart_inc.inc
+main.mcu: main.asm Libs\macro\macro_inc.inc Libs\fs1000a_lib\fs1000a_extern.inc Libs\fs1000a_lib\fs1000a_inc.inc Libs\soft_uart_lib\soft_uart_extern.inc Libs\soft_uart_lib\soft_uart_inc.inc
+AT89C1051_FS1000A_UART_converter.mp: <files>
+AT89C1051_FS1000A_UART_converter.hex: <files>

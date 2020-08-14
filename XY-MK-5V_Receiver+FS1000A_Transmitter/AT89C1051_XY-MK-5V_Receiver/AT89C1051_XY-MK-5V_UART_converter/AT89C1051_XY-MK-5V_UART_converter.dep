@@ -1,0 +1,7 @@
+<all>: AT89C1051_XY-MK-5V_UART_converter.mp AT89C1051_XY-MK-5V_UART_converter.hex
+<files>: AT89C1051_XY-MK-5V_UART_converter.mcp  Libs\xy_mk_5v_lib\xy_mk_5v_lib.mcu Libs\soft_uart_lib\soft_uart_lib.mcu main.mcu
+Libs\xy_mk_5v_lib\xy_mk_5v_lib.mcu: Libs\xy_mk_5v_lib\xy_mk_5v_lib.asm Libs\xy_mk_5v_lib\xy_mk_5v_inc.inc ..\macro\macro_inc.inc
+Libs\soft_uart_lib\soft_uart_lib.mcu: Libs\soft_uart_lib\soft_uart_lib.asm Libs\soft_uart_lib\soft_uart_inc.inc
+main.mcu: main.asm Libs\macro\macro_inc.inc Libs\xy_mk_5v_lib\xy_mk_5v_extern.inc Libs\xy_mk_5v_lib\xy_mk_5v_inc.inc Libs\soft_uart_lib\soft_uart_extern.inc Libs\soft_uart_lib\soft_uart_inc.inc
+AT89C1051_XY-MK-5V_UART_converter.mp: <files>
+AT89C1051_XY-MK-5V_UART_converter.hex: <files>
