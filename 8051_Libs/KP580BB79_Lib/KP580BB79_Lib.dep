@@ -1,0 +1,6 @@
+<all>: KP580BB79_Lib.mp KP580BB79_Lib.hex
+<files>: KP580BB79_Lib.mcp Main.mcu  KP580BB79_lib.mcu
+Main.mcu: Main.asm KP580BB79_extern.inc KP580BB79_inc.inc
+KP580BB79_lib.mcu: KP580BB79_lib.asm KP580BB79_inc.inc
+KP580BB79_Lib.mp: <files>
+KP580BB79_Lib.hex: <files>
